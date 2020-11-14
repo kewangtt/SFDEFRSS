@@ -369,7 +369,7 @@ int System::Run2(const cv::Mat & leftImage, const cv::Mat & rightImage, double t
                 memcpy(tempbuffer, imageName.c_str(), imageName.length() - 4);
                 
                 UndistRSEffectToRect(LeftUnDistTarget.data,(uint16_t *)ptrDisparity,0,finalState,mptrUndistImg,mptrDepthMap, &pointCloud);
-                SaveRawDepthMap(mptrDepthMap, mSaveDirPath + "/undist_depth", tempbuffer);
+                SaveRawDepthMap(mptrDepthMap, mSaveDirPath + "/undisted_depth", tempbuffer);
                 // cv::Mat undistImg_Rect(hG[0], wG[0], CV_8U, mptrUndistImg);
                 // cv::imwrite(mSaveDirPath + "/undist_rect/rgb/"+ imageName, undistImg_Rect);
 
@@ -391,9 +391,9 @@ int System::Run2(const cv::Mat & leftImage, const cv::Mat & rightImage, double t
         char tempbuffer[256] = {0};
         memcpy(tempbuffer, imageName.c_str(), imageName.length() - 4);
 
-        FILE * fp = fopen((mSaveDirPath + "/state1.txt").c_str(), "a");
-        fprintf(fp, "%s %.5f %.5f %.5f %.5f %.5f %.5f\n", tempbuffer, finalState[0], finalState[1], finalState[2], finalState[3], finalState[4], finalState[5]);
-        fclose(fp);
+        vector<vector<double>> tempStates;
+        tempStates.push_back(finalState);
+        SaveStates(mSaveDirPath + "/motion_states/" + tempbuffer + ".txt", tempStates);
 
         // Save left undist image and right undist image
         cv::imwrite((mSaveDirPath + "/left/" + imageName).c_str(), LeftUnDistTarget);
@@ -402,7 +402,7 @@ int System::Run2(const cv::Mat & leftImage, const cv::Mat & rightImage, double t
         // save baseline map
         cv::Mat baselineMap;
         mpStereoMatch->GenerateBaselineMap(baselineMap);
-        cv::imwrite((mSaveDirPath + "/baselineMap/" + imageName).c_str(), baselineMap);
+        cv::imwrite((mSaveDirPath + "/baseline_map/" + imageName).c_str(), baselineMap);
 
         lastState = finalState;
     }
@@ -432,7 +432,7 @@ int System::Run3(const cv::Mat & leftImage, const cv::Mat & rightImage, double t
 
     char tempbuffer[256] = {0};
     memcpy(tempbuffer, imageName.c_str(), imageName.length() - 4);
-    SaveStates(mSaveDirPath + "/CloseForm/" + tempbuffer + ".txt", CloseFormStates);
+    SaveStates(mSaveDirPath + "/close_form/" + tempbuffer + ".txt", CloseFormStates);
     return 0;
 }
 

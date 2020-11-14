@@ -3,9 +3,10 @@ build/
 *~
 lib/
 example/Result/state1.txt
-example/Result/baselineMap
-example/Result/CloseForm
+example/Result/baseline_map
+example/Result/close_form
 example/Result/disparity_rgb
 example/Result/left
 example/Result/right
-example/Result/undist_depth
+example/Result/undisted_depth
+example/Result/motion_states

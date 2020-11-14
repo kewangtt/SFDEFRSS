@@ -65,7 +65,7 @@ int main(int argc, char **argv)
 {
     if(argc != 3)
     {
-        cerr << endl << "Usage: ./SFRSS_V2 target_path mode" << endl;
+        cerr << endl << "Usage: ./build/SFRSS target_path mode" << endl;
         return 1;
     }
 

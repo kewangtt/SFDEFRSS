@@ -35,7 +35,6 @@ endif()
 
 LIST(APPEND CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/cmake_modules)
 
-set(OpenCV_DIR /home/wangke/project/opencv-3.4.8/build)
 find_package(OpenCV REQUIRED)
 if (OpenCV_VERSION VERSION_LESS 3.4)
 	message(FATAL_ERROR "Error: OpenCV version requires at least 3.4")
