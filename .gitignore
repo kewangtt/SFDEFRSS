@@ -2,10 +2,3 @@ CMakeLists.txt.user
 build/
 *~
 lib/
-example/Result/state1.txt
-example/Result/baselineMap
-example/Result/CloseForm
-example/Result/disparity_rgb
-example/Result/left
-example/Result/right
-example/Result/undist_depth
