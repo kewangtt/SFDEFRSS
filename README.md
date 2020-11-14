@@ -52,7 +52,7 @@ We also provide the close-form motion state solver proposed in "From two rolling
 We save the 20 candidates solutions with the most inliers in `.\example\Result\close_form`.
 
 ## 3. Demo video
-![image](https://github.com/kewangtt/SFDEFRSS/tree/main/demo/demo.gif)
+![living](https://github.com/kewangtt/SFDEFRSS/tree/main/demo/demo.gif)
 
 ## 4. License
 The open-source version is licensed under the GNU General Public License Version 3 (GPLv3). 
