@@ -55,4 +55,4 @@ We save the 20 candidates solutions with the most inliers in `.\example\Result\c
 ![image](https://github.com/kewangtt/SFDEFRSS/tree/main/demo/demo.gif)
 
 ## 4. License
-The open-source version is licensed under the GNU General Public License Version 3 (GPLv3).
+The open-source version is licensed under the GNU General Public License Version 3 (GPLv3). 
