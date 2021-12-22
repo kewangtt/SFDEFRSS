@@ -1,5 +1,19 @@
 # SFDEFRSS: Single Frmae Depth Estimation for Rolling Shutter Stereo
 
+## Citation
+
+```
+@ARTICLE{9369005,
+  author={Wang, Ke and Liu, Chuhao and Wang, Kaixuan and Shen, Shaojie},
+  journal={IEEE Robotics and Automation Letters}, 
+  title={Depth Estimation Under Motion With Single Pair Rolling Shutter Stereo Images}, 
+  year={2021},
+  volume={6},
+  number={2},
+  pages={3160-3167},
+  doi={10.1109/LRA.2021.3063695}}
+```
+
 ## 1. Installation
 git clone https://github.com/kewangtt/SFDEFRSS.git
 
